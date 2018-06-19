@@ -1,0 +1,21 @@
+pandas==0.22.0
+ipdb==0.10.3
+scipy==1.0.0
+simplejson==3.13.2
+
+
+# for retrieving files via url
+#
+requests==2.18.4
+
+# for reading excel
+#
+xlrd==1.1.0
+
+# json schema
+#
+jsonschema==2.6.0
+
+# documentation
+#
+Sphinx==1.7.1

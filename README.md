@@ -1,15 +1,6 @@
-# Eventdata-service
-Web service for event data two Ravens
-[![Build Status](https://travis-ci.org/TwoRavens/raven-metadata-service.svg?branch=master)](https://travis-ci.org/TwoRavens/raven-metadata-service.svg)
-
-(note! under initial development. very pre-alpha, etc)
-
----
-
 # eventdata-service
-
-Service to produce TwoRavens Eventdata.
-
+Web service for event data two Ravens
+---
 ## Install
 
 Prerequisites:

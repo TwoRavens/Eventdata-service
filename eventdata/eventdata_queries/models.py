@@ -1,5 +1,5 @@
 from django.db import models
-import json
+import json, jsonfield
 import decimal
 from django.db import models
 from django.urls import reverse
@@ -27,9 +27,11 @@ class EventDataSavedQuery(TimeStampedModel):
     description = models.TextField(default=None)
     username = models.CharField(blank=False,
                                 max_length=255)
-    # query
+    query = jsonfield.JSONField(default=None,
+                                blank=False,
+                                load_kwargs=dict(object_pairs_hook=OrderedDict))
 
-    result_count = models.IntegerField(default= -1)
+    result_count = models.IntegerField(default=-1)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now_add=True)
     saved_to_dataverse = models.BooleanField(default=False)

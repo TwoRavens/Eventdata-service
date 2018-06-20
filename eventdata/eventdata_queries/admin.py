@@ -6,6 +6,7 @@ class EventDataSavedQueryAdmin(admin.ModelAdmin):
     list_display = ('name',
                     'description',
                     'username',
+                    'query',
                     'result_count',
                     'created',
                     'modified',

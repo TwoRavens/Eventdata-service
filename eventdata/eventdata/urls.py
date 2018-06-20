@@ -14,8 +14,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
+from django.conf.urls import include
+from django.views.generic import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('eventdata/', include('eventdata_queries.urls'))
+] + static(settings.STATIC_URL,
+           #document_root=settings.STATIC_ROOT)
+           document_root=settings.TEST_DIRECT_STATIC)
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        re_path(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns
+

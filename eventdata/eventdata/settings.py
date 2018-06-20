@@ -70,8 +70,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'eventdata.wsgi.application'
-
-
+# STATIC_URL = '/static/'
+TEST_DIRECT_STATIC = None
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
